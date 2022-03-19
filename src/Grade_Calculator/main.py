@@ -2,6 +2,7 @@ no_changed_point_int = 0
 new_point_int = 0
 total_category_points = 0
 total = 0
+ui = 0
 
 
 def summative():
@@ -51,9 +52,10 @@ def set_up(self):
     self.timer.start(100)
 
 
-if __name__ == "__main__":
+def main():
     import window
     import sys
+    global ui
 
     app = window.QtWidgets.QApplication(sys.argv)
     Dialog = window.QtWidgets.QDialog()
@@ -63,3 +65,7 @@ if __name__ == "__main__":
     # noinspection PyTypeChecker
     set_up(ui)
     sys.exit(app.exec_())
+
+
+if __name__ == "__main__":
+    main()
